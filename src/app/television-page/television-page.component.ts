@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./television-page.component.scss']
 })
 export class TelevisionPageComponent implements OnInit {
+  num = 0
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {}
+
+  fullInfo() {
+    this.num++
+    if(this.num == 1) {
+      alert('1')
+    } else if(this.num == 2) {
+      alert('2')
+      this.num = 0
+    }
   }
 
 }
