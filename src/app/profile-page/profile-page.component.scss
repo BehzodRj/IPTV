@@ -1,0 +1,141 @@
+.profilePage_container{
+    background-image: url('/assets/img/HomeBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .profilePage_block{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 10px;
+        .profilePage_header{
+            img{
+
+            }
+        }
+        .profilePage_item{
+            h1{
+                font-family: 'Raleway';
+                font-weight: 800;
+                font-size: 32px;
+                color: #E1E6EE;
+                
+            }
+            .nameUser_block{
+                background: rgba(32, 32, 32, 0.95);
+                border: 0.5px solid rgba(255, 255, 255, 0.5);
+                box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25), inset 0px 4px 60px rgba(57, 58, 58, 0.25);
+                border-radius: 25px;  
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between; 
+                height: 70px;
+                text-indent: 10px; 
+                margin-top: 10px;           
+                h1{
+                    font-family: 'Raleway';
+                    font-weight: 600;
+                    font-size: 32px;
+                    color: #FFFFFF;
+
+                }
+                h2{
+                    font-family: 'Raleway';
+                    font-weight: 400;
+                    font-size: 24px;
+                    color: #FFFFFF;
+                    margin-right: 10px;
+                    span{
+                        font-family: 'Raleway';
+                        font-weight: 600;
+                        font-size: 32px;
+                        color: #FFFFFF;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .information_block{
+            background: rgba(32, 32, 32, 0.95);
+            border: 0.5px solid rgba(255, 255, 255, 0.5);
+            box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25), inset 0px 0px 60px #393A3A;
+            border-radius: 25px;
+            width: 500px;
+            padding: 40px 40px 80px 40px;
+            margin-top: 50px;
+            h2{
+                font-family: 'Raleway';
+                font-weight: 700;
+                font-size: 30px;
+                color: #FFFFFF;
+                text-align: center;
+                
+            }
+            .information_item{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+            .balance_block{
+
+                h2{
+                    font-family: 'Raleway';
+                    font-weight: 400;
+                    font-size: 24px;
+                    color: #FFFFFF;
+                }
+                h1{
+                    font-family: 'Raleway';
+                    font-weight: 600;
+                    font-size: 64px;
+                    color: #FFFFFF;                    
+                    span{
+                        font-family: 'Raleway';
+                        font-weight: 400;
+                        font-size: 36px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            .days_block{
+
+                h2{
+
+                }
+                h1{
+                    font-family: 'Raleway';
+                    font-weight: 600;
+                    font-size: 64px;
+                    color: #FFFFFF;                    
+                    span{
+
+                    }
+                }
+            }
+        }
+            
+        }
+        .profile_btn{
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 100px;
+
+            width: 250px;
+            
+                button{
+                    background: #EA3E2A;
+                    border-radius: 50px;
+                    width: 100%;
+                    height: 50px;
+                    font-family: 'Raleway';
+                    font-weight: 700;
+                    font-size: 32px;
+                    color: #FFFFFF;
+                    border: none;
+                    &:active{
+                        transform: scale(.99);
+                    }
+                }
+            }
+    }
+}

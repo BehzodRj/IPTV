@@ -1,0 +1,112 @@
+.homePage_container{
+    background-image: url('/assets/img/HomeBackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .homePage_block{
+        max-width: 1200px;
+        margin: 0 auto;
+        .homePage_header{
+            img{
+
+            }
+        }
+        .homePage_item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .tv_block{
+                svg{
+                    width: 500px;
+                    height: 500px;
+                }
+                h1{
+                    font-family: 'Raleway';
+                    font-weight: 400;
+                    font-size: 40px;
+                    color: #E1E6EE;
+                    text-align: center;
+                    
+                }
+            }
+            .profile_block{
+                svg{
+                    width: 500px;
+                    height: 500px;
+                }
+                h1{
+                    font-family: 'Raleway';
+                    font-weight: 400;
+                    font-size: 40px;
+                    color: #E1E6EE;  
+                    text-align: center;
+                }
+            }
+        }
+       
+    }
+    @media screen and(max-width: 999px){
+        height: 100%;
+        .homePage_block{
+
+        .homePage_item{
+            justify-content: center;
+        }
+     }
+    }
+    @media screen and(max-width: 500px){
+        .homePage_block{
+            .homePage_header{
+                img{
+                    width: 150px;
+                }
+            }
+            .homePage_item{
+                .tv_block{
+                    width: 90%;
+                    margin-top: 30px;
+                    svg{
+                        width: 100%;
+                        height: 350px;
+                    }
+                    h1{
+                        font-size: 27px;
+                    }
+                }
+                .profile_block{
+                    width: 90%;
+                    margin-top: 30px;
+                    svg{
+                        width: 100%;
+                        height: 350px;
+                    }
+                    h1{
+                        font-size: 27px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and(max-width: 330px){
+        .homePage_block{
+            .homePage_item{
+                .tv_block{
+                    svg{
+                        width: 100%;
+                        height: 280px;
+                    }
+                   
+                }
+                .profile_block{
+                   
+                    svg{
+                        width: 100%;
+                        height: 280px;
+                    }
+                   
+                }
+            }
+        }
+    }
+}

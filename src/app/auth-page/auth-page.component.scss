@@ -1,0 +1,83 @@
+.authPage_container{
+    background-image: url('/assets/img/AuthBackground.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    .authPage_block{
+       .authPage_header{
+        display: flex;
+        justify-content: center;
+    }
+    .authPage_item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    .authPage_form{
+      
+        input{
+            background: rgba(32, 32, 32, 0.7);
+            border: 2px solid #AFB0B1;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+            width: 390px;
+            height: 50px;
+            font-family: 'Raleway';
+            font-weight: 400;
+            font-size: 24px;
+            color: #FFFFFF;
+            text-indent: 20px;
+            margin-bottom: 10px;
+        }
+        button{
+            background: linear-gradient(90deg, #EA3E2A 0%, #CB3321 104.44%);
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+            font-family: 'Raleway';
+            font-weight: 700;
+            font-size: 32px;
+            color: #FFFFFF;
+            width: 390px;
+            height: 50px;
+            border: none;
+
+            &:active{
+                transform: scale(.99);
+            }
+        }
+    }
+} 
+    }
+    @media screen and (max-width:410px) {
+        .authPage_block{
+            .authPage_header{
+                img{
+                    width: 150px;
+                }
+            }
+            .authPage_item{
+                .authPage_form{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input{
+                        margin-bottom: 0;
+                        width: 90%;
+                        font-size: 20px;
+                    }
+                    button{
+                        width: 90%;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
