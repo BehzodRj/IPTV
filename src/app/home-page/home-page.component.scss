@@ -6,6 +6,7 @@
     .homePage_block{
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 20px;
         .homePage_header{
             img{
 
@@ -46,7 +47,26 @@
         }
        
     }
-    @media screen and(max-width: 999px){
+    @media screen and(max-width: 1200px){
+        .homePage_block{
+
+        .homePage_item{
+            .tv_block{
+                svg{
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+            .profile_block{
+                svg{
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+        }
+     }
+    }
+    @media screen and(max-width: 739px){
         height: 100%;
         .homePage_block{
 
