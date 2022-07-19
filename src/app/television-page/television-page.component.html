@@ -4,7 +4,7 @@
             <img src="/assets/img/logo.svg" alt="">
         </div>
         <h1 class="title" *ngIf="num < 1">ТЕЛЕВИДЕНИЕ</h1>
-        <h1 class="title" *ngIf="num > 0">ВСЕ КАНАЛЫ</h1>
+        <h1 class="title" *ngIf="num > 0"> <i style="cursor: pointer;" class="fas fa-arrow-left" (click)="shortInfo()"></i> ВСЕ КАНАЛЫ</h1>
         
         <div class="list_channels_content">
             <div class="list_channels_name" [@animateBlock]="widthBlock">

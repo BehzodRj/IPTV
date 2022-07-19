@@ -31,8 +31,10 @@
         direction: rtl !important;
         height: 630px;
         overflow-y: scroll;
+        overflow-x: hidden;
 
         .list_channels_name_items {
+          opacity: 1;
           h1 {
             width: 200px;
             text-align: end;
@@ -122,7 +124,7 @@
 
       .list_channels_fullInfo {
         margin-left: 120px;
-        overflow: scroll;
+        overflow: hidden;
         width: 0;
 
         .fullInfo_title {

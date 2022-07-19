@@ -1,5 +1,6 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-television-page',
@@ -8,17 +9,16 @@ import { Component, OnInit } from '@angular/core';
   animations: [
     trigger('animateBlock', [
       state('leftMargin', style({ marginLeft: '30px' })),
-      state('rightMargin', style({ marginLeft: '30px' })),
-      transition('leftMargin <=> rightMargin', animate(300)),
+      transition('* <=> rightMargin', animate(400)),
 
-      state('close', style({ width: '10px' })),
-      transition('* <=> close', animate(300)),
+      state('widthShort', style({ width: '10px' })),
+      transition('widthShort <=> widthFull', animate(400)),
 
-      state('opacity', style({ opacity: 0 })),
-      transition('* <=> close', animate(200)),
+      state('opacityOnListText', style({ opacity: '0' })),
+      transition('* <=> widthShort', animate(300)),
 
-      state('fullInfo', style({ width: 'auto' })),
-      transition('* <=> fullInfo', animate(700)),
+      state('fullInfoFull', style({ width: 'auto' })),
+      transition('* <=> fullInfoFull', animate(900)),
     ])
   ],
 })
@@ -29,20 +29,30 @@ export class TelevisionPageComponent implements OnInit {
   opacityText: any
   fullInfoBlock: any
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
 
   fullInfo() {
     this.num++
     if(this.num == 1) {
-      this.marginBlock = !this.marginBlock
-      this.widthBlock = 'close'
-      this.opacityText = 'opacity'
-      this.fullInfoBlock = 'fullInfo'
-    } else if(this.num == 2) {
+      this.marginBlock = 'leftMargin'
+      this.widthBlock = 'widthShort'
+      this.opacityText = 'opacityOnListText'
+      this.fullInfoBlock = 'fullInfoFull'
+    } 
+    else if(this.num == 2) {
       this.num = 0
+      this.router.navigate(['/watch'])
     }
+  }
+
+  shortInfo() {
+    this.num = 0
+    this.marginBlock = 'rightMargin'
+    this.widthBlock = 'widthFull'
+    this.opacityText = 'opacityOffListText'
+    this.fullInfoBlock = 'fullInfoShort'
   }
 
 }
