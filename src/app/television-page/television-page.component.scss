@@ -119,6 +119,68 @@
           }
         }
       }
+
+      .list_channels_fullInfo {
+        margin-left: 120px;
+        overflow: scroll;
+        width: 0;
+
+        .fullInfo_title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500;
+          font-size: 30px;
+          color: #E1E6EE;
+        }
+
+        .under_title {
+          margin-top: 10px;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 32px;
+          color: #E1E6EE;          
+        }
+
+        .list_channels_progress {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .times {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            color: #E1E6EE;            
+          }
+
+          progress {
+            margin: 0 22px;
+            background-color: transparent;
+            width: 242px;
+
+            &::-webkit-progress-bar {
+              background-color: #000000;
+              height: 12px;
+              border-radius: 25px;
+            }
+            &::-webkit-progress-value {
+              background-color: #EA3E2A;
+              border-radius: 25px;
+            }
+            &::-moz-progress-bar {
+              background-color: #000000;
+            }
+          }
+        }
+
+        .description {
+          margin-top: 20px;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 500;
+          font-size: 24px;
+          color: #E1E6EE;
+          width: 379px;
+        }
+      }
     }
   }
 }

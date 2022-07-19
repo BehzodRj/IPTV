@@ -7,8 +7,8 @@
         <h1 class="title" *ngIf="num > 0">ВСЕ КАНАЛЫ</h1>
         
         <div class="list_channels_content">
-            <div class="list_channels_name" [@widthBlock]="widthBlock">
-                <div class="list_channels_name_items" [@widthBlock]="opacityText">
+            <div class="list_channels_name" [@animateBlock]="widthBlock">
+                <div class="list_channels_name_items" [@animateBlock]="opacityText">
                   <h1 style="color: #EA3E2A;">Все каналы</h1>
                   <h1>Избранное</h1>
                   <h1>Иранские</h1>
@@ -23,7 +23,7 @@
               </div>
 
             
-        <div class="list_channels_block" [@widthBlock]="animeText">
+        <div class="list_channels_block" [@animateBlock]="marginBlock">
 
             <div class="list_channels_items" (click)="fullInfo()">
                 <img src="/assets/img/disney.png" alt="">
@@ -126,8 +126,8 @@
 
         </div>
 
-        <div class="list_channels_fullInfo">
-            <h1 class="title">Сейчас на дисней</h1>
+        <div class="list_channels_fullInfo" [@animateBlock]="fullInfoBlock">
+            <h1 class="fullInfo_title">Сейчас на дисней</h1>
             <h2 class="under_title">Лило и Стич</h2>
             
             <div class="list_channels_progress">
