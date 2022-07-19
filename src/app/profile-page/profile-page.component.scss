@@ -25,12 +25,11 @@
                 border: 0.5px solid rgba(255, 255, 255, 0.5);
                 box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25), inset 0px 4px 60px rgba(57, 58, 58, 0.25);
                 border-radius: 25px;  
-                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between; 
                 height: 70px;
-                text-indent: 10px; 
+                padding: 0 20px; 
                 margin-top: 10px;           
                 h1{
                     font-family: 'Raleway';
@@ -60,7 +59,7 @@
             border: 0.5px solid rgba(255, 255, 255, 0.5);
             box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25), inset 0px 0px 60px #393A3A;
             border-radius: 25px;
-            width: 500px;
+            max-width: 500px;
             padding: 40px 40px 80px 40px;
             margin-top: 50px;
             h2{
@@ -88,7 +87,8 @@
                     font-family: 'Raleway';
                     font-weight: 600;
                     font-size: 64px;
-                    color: #FFFFFF;                    
+                    color: #FFFFFF;   
+                    text-align: center;                 
                     span{
                         font-family: 'Raleway';
                         font-weight: 400;
@@ -106,7 +106,8 @@
                     font-family: 'Raleway';
                     font-weight: 600;
                     font-size: 64px;
-                    color: #FFFFFF;                    
+                    color: #FFFFFF;    
+                    text-align: center;                
                     span{
 
                     }
@@ -132,10 +133,205 @@
                     font-size: 32px;
                     color: #FFFFFF;
                     border: none;
+                    cursor: pointer;
                     &:active{
                         transform: scale(.99);
                     }
                 }
             }
+    }
+    @media screen and(max-width: 768px) {
+        .profilePage_block{
+            .profilePage_header{
+                img{
+                    width: 150px;
+                }
+            }
+            .profilePage_item{
+                h1{
+                    font-size: 25px;
+                }
+                .nameUser_block{
+                    h1{
+                        font-size: 20px;
+                    }
+                    h2{
+                        font-size: 20px;
+                        span{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+            .information_block{
+                h2{
+                    font-size: 25px;
+                }
+                .information_item{
+                    .balance_block{
+                        h2{
+                            font-size: 20px;
+                        }
+                        h1{
+                            font-size: 50px;
+                            span{
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                    .days_block{
+                        h2{
+                            font-size: 20px;
+                        }
+                        h1{
+                            font-size: 50px;
+                            span{
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+            .profile_btn{
+                margin-top: 50px;
+                button{
+                    font-size: 25px;
+                    
+                }
+            }
+        }
+        
+    }
+    @media screen and(max-width: 480px) {
+        .profilePage_block{
+            .profilePage_header{
+                img{
+                    width: 150px;
+                }
+            }
+            .profilePage_item{
+                h1{
+                    font-size: 25px;
+                }
+                .nameUser_block{
+                    padding: 0 10px;
+                    height: 50px;
+                    h1{
+                        font-size: 16px;
+                    }
+                    h2{
+                        font-size: 16px;
+                        span{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .information_block{
+                padding: 40px 15px 40px 15px;
+                h2{
+                    font-size: 20px;
+                }
+                .information_item{
+                    .balance_block{
+                        h2{
+                            font-size: 17px;
+                        }
+                        h1{
+                            font-size: 35px;
+                            span{
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                    .days_block{
+                        h2{
+                            font-size: 17px;
+                        }
+                        h1{
+                            font-size: 35px;
+                            span{
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            .profile_btn{
+                width: 200px;
+                button{
+                    font-size: 20px;
+                    height: 40px;
+                }
+            }
+        }
+        
+    }
+    @media screen and(max-width: 350px) {
+        .profilePage_block{
+            .profilePage_header{
+                img{
+                    width: 150px;
+                }
+            }
+            .profilePage_item{
+                h1{
+                    font-size: 25px;
+                }
+                .nameUser_block{
+                    padding: 0 10px;
+                    height: 50px;
+                    h1{
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    h2{
+                        margin-right: 0;
+                        font-size: 14px;
+                        span{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .information_block{
+                padding: 40px 15px 40px 15px;
+                h2{
+                    font-size: 18px;
+                }
+                .information_item{
+                    .balance_block{
+                        h2{
+                            font-size: 16px;
+                        }
+                        h1{
+                            font-size: 30px;
+                            span{
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                    .days_block{
+                        h2{
+                            font-size: 16px;
+                        }
+                        h1{
+                            font-size: 30px;
+                            span{
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            .profile_btn{
+                width: 200px;
+                button{
+                    font-size: 20px;
+                    height: 40px;
+                }
+            }
+        }
+        
     }
 }
