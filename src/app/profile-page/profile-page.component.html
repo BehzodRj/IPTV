@@ -1,3 +1,17 @@
+<div class="modal_container" *ngIf="modalQrCode">
+    
+    <div class="modal_block">
+     <i class="fa fa-times" (click)="modalQrCode = false"></i>
+     <h2>Вы действительно хотите выйти?</h2>
+     <div class="button_block">
+        <button>Да, выйти</button>
+        <button (click)="modalQrCode = false">Отмена</button>
+     </div>
+    </div>
+</div>
+
+
+
 <div class="profilePage_container">
     <div class="profilePage_block">
         <div class="profilePage_header">
@@ -24,7 +38,7 @@
             </div>
         </div> 
         <div class="profile_btn">
-            <button routerLink="/">Выйти</button>
+            <button (click)="modalQrCode = true">Выйти</button>
         </div>
     </div>
 </div>
