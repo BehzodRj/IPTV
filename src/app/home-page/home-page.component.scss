@@ -6,12 +6,7 @@
     .homePage_block{
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 20px;
-        .homePage_header{
-            img{
 
-            }
-        }
         .homePage_item{
             display: flex;
             align-items: center;
@@ -86,6 +81,7 @@
                 .tv_block{
                     width: 90%;
                     margin-top: 30px;
+                    cursor: pointer;
                     svg{
                         width: 100%;
                         height: 350px;
@@ -97,6 +93,7 @@
                 .profile_block{
                     width: 90%;
                     margin-top: 30px;
+                    cursor: pointer;
                     svg{
                         width: 100%;
                         height: 350px;
