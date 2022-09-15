@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { requestsService } from '../all.service';
 
 @Component({
   selector: 'app-profile-page',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-page.component.scss']
 })
 export class ProfilePageComponent implements OnInit {
-  modalQrCode: any = false
-  constructor() { }
+  modalQrCode = false
+  profileData: any = []
+  
+  constructor(private router: Router, private request: requestsService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.request.getRequest('/api/auth/profile').subscribe(response => {
+      console.log(response);
+      this.profileData = response
+    }, error => {
+      this.request.error(error)
+    })
+  }
+
+  logOut() {
+    localStorage.clear()
+    this.router.navigate(['/'])
   }
 
 }

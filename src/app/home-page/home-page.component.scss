@@ -2,7 +2,12 @@
     background-image: url('/assets/img/HomeBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
+
+    @media screen and (min-height: 859px) {
+        height: 100vh;
+    }
+
     .homePage_block{
         max-width: 1200px;
         margin: 0 auto;
@@ -12,6 +17,8 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            flex-direction: row-reverse;
+            height: 700px;
             .tv_block{
                 svg{
                     width: 500px;
@@ -62,11 +69,10 @@
      }
     }
     @media screen and(max-width: 739px){
-        height: 100%;
         .homePage_block{
-
         .homePage_item{
             justify-content: center;
+            height: 100%;
         }
      }
     }
@@ -106,6 +112,7 @@
         }
     }
     @media screen and(max-width: 330px){
+        height: 100vh;
         .homePage_block{
             .homePage_item{
                 .tv_block{

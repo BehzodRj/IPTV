@@ -9,6 +9,7 @@
        .authPage_header{
         display: flex;
         justify-content: center;
+      
     }
     .authPage_item{
         display: flex;
@@ -48,18 +49,19 @@
             height: 50px;
             border: none;
             cursor: pointer;
-            &:active{
-                transform: scale(.99);
-            }
         }
     }
 } 
+    }
+    @media screen and (max-width:961px) { 
+        background-image: url('/assets/img/auth_page.png'); 
     }
     @media screen and (max-width:410px) {
         .authPage_block{
             .authPage_header{
                 img{
-                    width: 150px;
+                    margin-top: 130px;
+                    width: 180px;
                 }
             }
             .authPage_item{

@@ -1,145 +1,50 @@
+<div class="live_video_container">
+    <video id="my-video" class="video-js vjs-theme-sea" muted autoplay playsinline data-setup='{}'>
+      <source src="http://45.94.219.9:8081/stream/test{{ 1 }}/hls/playlist.m3u8" type="application/x-mpegURL">
+    </video>
+</div>
 <div class="container">
     <div class="content">
         <div class="header_block">
             <img src="/assets/img/logo.svg" alt="">
         </div>
-        <h1 class="title" *ngIf="num < 1">ТЕЛЕВИДЕНИЕ</h1>
-        <h1 class="title" *ngIf="num > 0"> <i style="cursor: pointer;" class="fas fa-arrow-left" (click)="shortInfo()"></i> ВСЕ КАНАЛЫ</h1>
+        <h1 class="title" *ngIf="num < 1"> <i style="cursor: pointer; margin-right: 10px;" class="fas fa-arrow-left" routerLink="/home"></i> ТЕЛЕВИДЕНИЕ</h1>
+        <h1 class="title" *ngIf="num > 0"> <i style="cursor: pointer; margin-right: 10px;" class="fas fa-arrow-left" (click)="shortInfo()"></i> ВСЕ КАНАЛЫ</h1>
         
         <div class="list_channels_content">
             <div class="list_channels_name" [@animateBlock]="widthBlock">
                 <div class="list_channels_name_items" [@animateBlock]="opacityText">
-                  <h1 style="color: #EA3E2A;">Все каналы</h1>
-                  <h1>Избранное</h1>
-                  <h1>Иранские</h1>
-                  <h1>Таджикские</h1>
-                  <h1>Узбекские</h1>
-                  <h1>Фильмы</h1>
-                  <h1>Сериалы</h1>
-                  <h1>Детям</h1>
-                  <h1>Музыка</h1>
-                  <h1>Телепередачи</h1>
+                  <h1 *ngFor="let category of categoryData" [ngStyle]="{color: category.cathegorie_id == categoryID ? '#EA3E2A' : ''}" (click)="categoryButton(category.cathegorie_id)">{{ category.cathegorie_name }}</h1>
                 </div>
               </div>
-
             
         <div class="list_channels_block" [@animateBlock]="marginBlock">
 
-            <div class="list_channels_items" (click)="fullInfo()">
-                <img src="/assets/img/disney.png" alt="">
+            <div class="list_channels_items" *ngFor="let channel of channelData" (click)="fullInfo(channel.channel_id, channel.channel.potok_id)">
+                <img [src]="'http://nets.tj:8000/' + channel.channel.icon_url + '/1.jpg'" alt="">
                 <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
-                </div>
-            </div>
-
-            <div class="list_channels_items">
-                <img src="/assets/img/disney.png" alt="">
-                <div class="list_channels_items-info">
-                    <h1>001. Disney</h1>
-                    <h2>09:55 Лило и Стич 3+</h2>
-                    <h2>10:55 Пёс по кличке Пэт 3+</h2>
+                    <h1>{{ channel.channel?.channel_id }}. {{ channel.channel?.channel_name }}</h1>
+                    <h2>{{ channel.channel?.channels_epg[0]?.epg_start | date: 'hh:mm' }} {{ channel.channel?.channels_epg[0]?.epg_title }}</h2>
+                    <h2>{{ channel.channel?.channels_epg[1]?.epg_start | date: 'hh:mm' }} {{ channel.channel?.channels_epg[1]?.epg_title }}</h2>
                 </div>
             </div>
 
         </div>
 
-        <div class="list_channels_fullInfo" [@animateBlock]="fullInfoBlock">
-            <h1 class="fullInfo_title">Сейчас на дисней</h1>
-            <h2 class="under_title">Лило и Стич</h2>
+        <div class="list_channels_fullInfo" [@animateBlock]="fullInfoBlock" *ngIf="fullChannelData.channel_id == channel_id">
+            <h1 class="fullInfo_title">Сейчас на {{ fullChannelData.channel?.channel_name }}</h1>
+            <h2 class="under_title">{{ fullChannelData.channel?.channels_epg[0]?.epg_title }}</h2>
             
             <div class="list_channels_progress">
-                <h2 class="times">9.55</h2>
-                <progress max="100" value="30"></progress>
-                <h2 class="times">10.55</h2>
+                <h2 class="times">{{ fullChannelData.channel?.channels_epg[0]?.epg_start | date: 'hh:mm' }}</h2>
+                <progress [max]="fullChannelData.channel?.channels_epg[0]?.epg_stop | date: 'hh.mm'" [value]="date"></progress>
+                <h2 class="times">{{ fullChannelData.channel?.channels_epg[0]?.epg_stop | date: 'hh:mm' }}</h2>
             </div>
 
-            <h2 class="description">Лило — это маленькая девочка, живущая на Гавайах. 
-                Она сирота и живет вместе со своей старшей сестрой Нани. 
-                Лило любит всех животных, но больше всего она...
+            <h2 class="description">{{ fullChannelData.channel.channels_epg[0]?.desc }}
             </h2>
+
+            <button class="fullInfo_button" (click)="watchButton()">Смотреть</button>
         </div>
         </div>
     </div>

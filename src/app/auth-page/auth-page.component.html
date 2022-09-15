@@ -1,13 +1,13 @@
-<div class="authPage_container">
+<div class="authPage_container"> 
     <div class="authPage_block">
         <div class="authPage_header">
             <img src="./assets/img/logo.svg" alt="">
         </div>
         <div class="authPage_item">
-        <div class="authPage_form">
-            <input type="text" placeholder="Логин"> <br>
-            <input type="password" placeholder="Пароль"> <br>
-            <button routerLink="/home">Войти</button>
+        <div class="authPage_form" [formGroup]="authForm">
+            <input type="number" placeholder="Логин" formControlName="account_id"> <br>
+            <input type="password" placeholder="Пароль" formControlName="password"> <br>
+            <button [disabled]="authForm.invalid" [ngStyle]="{opacity: authForm.invalid ? '0.6' : '1'}" (click)="logIn()">Войти</button>
         </div>
     </div>
     </div>

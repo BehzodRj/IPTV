@@ -82,16 +82,16 @@
     background-image: url('/assets/img/HomeBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
+    
+    @media screen and (min-height: 630px) {
+        height: 100vh;
+    }
+    
     .profilePage_block{
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 10px;
-        .profilePage_header{
-            img{
-
-            }
-        }
         .profilePage_item{
             h1{
                 font-family: 'Raleway';
@@ -188,7 +188,7 @@
                 h1{
                     font-family: 'Raleway';
                     font-weight: 600;
-                    font-size: 64px;
+                    font-size: 45px;
                     color: #FFFFFF;    
                     text-align: center;                
                     span{
@@ -290,6 +290,7 @@
     }
     @media screen and(max-width: 480px) {
         .profilePage_block{
+            height: 100vh;
             .profilePage_header{
                 img{
                     width: 150px;
@@ -402,4 +403,5 @@
         }
         
     }
+
 }

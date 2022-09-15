@@ -1,1 +1,35 @@
-<p>watch-page works!</p>
+<div class="live_video_container" (mouseover)="showAboutChannel = true" (mouseout)="showAboutChannel = false">
+  <video id="my-video" class="video-js vjs-theme-sea" autoplay playsinline data-setup='{}'>
+    <source src="http://45.94.219.9:8081/stream/test{{ watchData.channel?.potok_id }}/hls/playlist.m3u8" type="application/x-mpegURL">
+  </video>
+</div>
+
+<div class="header_live_block" (mouseover)="showAboutChannel = true" (mouseout)="showAboutChannel = false" [ngStyle]="{display: showAboutChannel ? 'flex' : 'none'}">
+  <img src="/assets/img/logo.svg" alt="">
+
+  <div class="header_live_items">
+    <i class="fas fa-arrow-left" (click)="shortInfo()"></i>
+    <h1>{{ watchData.channel?.channel_name }}</h1>
+  </div>
+</div>
+
+<div class="footer_live_block" (mouseover)="showAboutChannel = true" (mouseout)="showAboutChannel = false" [ngStyle]="{display: showAboutChannel ? 'flex' : 'none'}">
+  <div class="footer_live_title">
+    <h1 class="title">СЕЙЧАС: {{ watchData.channel?.channels_epg[0]?.epg_title }}</h1>
+    <h2 class="description">ДАЛЕЕ: {{ watchData.channel?.channels_epg[1]?.epg_title }}</h2>
+  </div>
+
+  <div class="footer_live_items">
+    <div class="footer_live_progress">
+      <h1>{{ watchData.channel?.channels_epg[0]?.epg_start | date: 'hh:mm' }}</h1>
+      <progress [max]="watchData.channel?.channels_epg[0]?.epg_stop | date: 'hh.mm'" [value]="date"></progress>
+      <h1>{{ watchData.channel?.channels_epg[0]?.epg_stop | date: 'hh:mm' }}</h1>
+    </div>
+    
+    <div class="footer_live_progress footer_live_progress_margin">
+      <h1>{{ watchData.channel?.channels_epg[1]?.epg_start | date: 'hh:mm' }}</h1>
+      <progress [max]="watchData.channel?.channels_epg[1]?.epg_stop | date: 'hh.mm'" [value]="date"></progress>
+      <h1>{{ watchData.channel?.channels_epg[1]?.epg_stop | date: 'hh:mm' }}</h1>
+    </div>
+  </div>
+</div>

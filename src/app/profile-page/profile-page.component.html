@@ -4,7 +4,7 @@
      <i class="fa fa-times" (click)="modalQrCode = false"></i>
      <h2>Вы действительно хотите выйти?</h2>
      <div class="button_block">
-        <button>Да, выйти</button>
+        <button (click)="logOut()">Да, выйти</button>
         <button (click)="modalQrCode = false">Отмена</button>
      </div>
     </div>
@@ -20,8 +20,8 @@
         <div class="profilePage_item">
             <h1>ПРОФИЛЬ</h1>
             <div class="nameUser_block">
-                <h1>ИМЯ ПОЛЬЗОВАТЕЛЯ</h1>
-                <h2>Логин:<span>1257</span></h2>
+                <h1>{{ profileData.user_name }}</h1>
+                <!-- <h2>Логин:<span>{{ profileData.user_login }}</span></h2> -->
             </div>
         </div>
         <div class="information_block">
@@ -29,11 +29,11 @@
              <div class="information_item">
             <div class="balance_block">
                 <h2>Баланс:</h2>
-                <h1>587 <span>TJS</span></h1>
+                <h1>{{ profileData.balance }} <span>TJS</span></h1>
             </div>
             <div class="days_block">
-                <h2>Дней оплачено:</h2>
-                <h1>38 <span>дн.</span></h1>
+                <h2>Оплачено до</h2>
+                <h1>{{ profileData.expiration_date | date: 'dd.MM.YYYY' }}</h1>
             </div>
             </div>
         </div> 

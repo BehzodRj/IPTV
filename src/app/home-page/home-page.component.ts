@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+  onHover = 0
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {}
 
 }
