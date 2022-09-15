@@ -8,6 +8,7 @@
     height: 100vh;
   }
 }
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -48,6 +49,7 @@
 
         .list_channels_name_items {
           opacity: 1;
+
           h1 {
             width: 200px;
             text-align: end;
@@ -155,8 +157,8 @@
           font-family: 'Raleway', sans-serif;
           font-weight: 700;
           font-size: 32px;
-          color: #E1E6EE;   
-          width: 400px;       
+          color: #E1E6EE;
+          width: 400px;
         }
 
         .list_channels_progress {
@@ -168,7 +170,7 @@
             font-family: 'Raleway', sans-serif;
             font-weight: 500;
             font-size: 24px;
-            color: #E1E6EE;            
+            color: #E1E6EE;
           }
 
           progress {
@@ -181,10 +183,12 @@
               height: 12px;
               border-radius: 25px;
             }
+
             &::-webkit-progress-value {
               background-color: #EA3E2A;
               border-radius: 25px;
             }
+
             &::-moz-progress-bar {
               background-color: #000000;
             }
@@ -214,6 +218,23 @@
           cursor: pointer;
         }
       }
+    }
+  }
+}
+
+// Da drni hami navis
+@media screen and (max-width: 1329px) {
+  .container {
+    .content {
+      .title {
+        display: none;
+      }
+
+      .list_channels_content {
+        display: none;
+      }
+
+      // Inamija navis
     }
   }
 }
