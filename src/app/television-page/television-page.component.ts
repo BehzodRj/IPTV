@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { requestsService } from '../all.service';
 
+
 @Component({
   selector: 'app-television-page',
   templateUrl: './television-page.component.html',
@@ -36,7 +37,7 @@ export class TelevisionPageComponent implements OnInit {
   fullInfoBlock: any
   channel_id: any = 0
   date: any
-
+  allChannels: any = []
   constructor(private router: Router, private request: requestsService, private http: HttpClient) { }
 
   ngOnInit() {

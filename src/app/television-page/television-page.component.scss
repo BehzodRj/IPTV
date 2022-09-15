@@ -221,6 +221,89 @@
     }
   }
 }
+.all-panels {
+  @media screen and (max-width:1329px) {
+    border: 0.5px solid #FFFFFF;
+    border-radius: 30px;
+
+  }
+}
+.mat-expansion-panel {
+  background: rgba(0, 0, 0, .6);
+  max-width: 1329px;
+  display: none;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #7E7E7F;
+  }
+
+  .mat-expansion-panel-header {
+    padding: 10px 0 10px 20px;
+
+  }
+
+  .allList_items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 30px;
+    }
+
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      margin: 0;
+      margin-left: 10px;
+    }
+
+  }
+
+  .allChanels {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 108%; 
+    overflow: auto;
+
+    img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width:766px) {
+      justify-content: center;
+
+    }
+  }
+
+  @media screen and (max-width:1329px) {
+    display: block;
+  }
+}
+
+
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+  background: none;
+  
+}
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header {
+  background: none;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  
+}
+.mat-expansion-panel-body{
+ background: red;
+}
 
 // Da drni hami navis
 @media screen and (max-width: 1329px) {

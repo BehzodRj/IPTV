@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { TelevisionPageComponent } from './television-page/television-page.component';
 import { WatchPageComponent } from './watch-page/watch-page.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { WatchPageComponent } from './watch-page/watch-page.component';
     HomePageComponent,
     ProfilePageComponent,
     TelevisionPageComponent,
-    WatchPageComponent
+    WatchPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,8 @@ import { WatchPageComponent } from './watch-page/watch-page.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
